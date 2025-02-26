@@ -1,0 +1,49 @@
+{% load static %}
+<!-- ##### Header Area Start ##### -->
+<header class="header-area">
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+        <div class="container">
+            <!-- Navbar Area -->
+            <div class="delicious-main-menu">
+                <div class="classy-nav-container">
+                    <div class="container">
+                        <!-- Menu -->
+                        <nav class="classy-navbar" id="deliciousNav">
+                            <!-- Logo -->
+                            <a class="nav-brand" href="{% url 'index' %}">
+                                <img src="{% static 'img/core-img/logo.png' %}" alt="Logo Delícia Mania" width="250">
+                            </a>
+
+                            <!-- Navbar Toggler -->
+                            <div class="classy-navbar-toggler">
+                                <span class="navbarToggler"></span>
+                            </div>
+
+                            <!-- Menu -->
+                            <div class="classy-menu text-right">
+                                <!-- Close Button -->
+                                <div class="classycloseIcon">
+                                    <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                                </div>
+
+                                <!-- Navigation -->
+                                <div class="classynav">
+                                    <ul>
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                    </ul>
+
+                                    <!-- Search Button -->
+                                    <div class="search-btn">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ##### Header Area End ##### -->
