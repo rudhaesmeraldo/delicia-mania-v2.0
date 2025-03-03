@@ -1,318 +1,389 @@
 /* Reset de margens e padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none; /* Remove sublinhado dos links */
+    margin: 0; /* Remove todas as margens de todos os elementos */
+    padding: 0; /* Remove todo o padding de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura dos elementos */
+    text-decoration: none; /* Remove o sublinhado dos links */
 }
 
 /* Definições gerais */
+
+html, body {
+    height: 100%;
+    margin: 0; /* Remove margens padrão */
+}
+
 body {
     font-family: Arial, sans-serif; /* Define a fonte padrão como Arial */
-    line-height: 1.6; /* Define altura das linhas */
-    background-color: #f4f4f4; /* Cor de fundo clara */
-    color: #333; /* Cor padrão de texto */
+    line-height: 1.6; /* Define a altura das linhas de texto para 1.6, melhorando a legibilidade */
+    background-color: #f4f4f4; /* Define a cor de fundo clara para o body */
+    color: #333; /* Define a cor padrão do texto como um tom de cinza escuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garantir que o conteúdo se espalhe pela tela */
 }
 
 /* Container */
 .container {
-    width: 100%; /* Ocupa 100% da largura */
-    max-width: 1200px; /* Limita a largura máxima */
-    padding: 0 15px; /* Padding nas laterais */
-    margin: 0 auto; /* Centraliza o container */
+    width: 100%; /* Faz com que o container ocupe 100% da largura da tela */
+    max-width: 1200px; /* Define a largura máxima do container como 1200px */
+    padding: 0 15px; /* Adiciona padding de 15px nas laterais */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    flex-grow: 1; /* Faz o container de conteúdo crescer para preencher o espaço */
+
 }
 
 /* HEADER - Barra de navegação */
 .header-area {
-    background-color: #fff; /* Cor de fundo */
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    margin-bottom: 20px; /* Espaço abaixo do header */
+    background-color: #fff; /* Define a cor de fundo do cabeçalho como branco */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave no cabeçalho */
+    margin-bottom: 10px; /* Adiciona 10px de margem na parte inferior do cabeçalho */
 }
 
 .top-header-area {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    height: 100px;
-    position: relative;
+    display: flex; /* Usa o layout flexbox para organizar os itens de forma flexível */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Distribui os itens de forma espaçada entre as extremidades */
+    padding: 10px 20px; /* Adiciona 10px de padding na parte superior e inferior, e 20px nas laterais */
+    height: 100px; /* Define a altura do cabeçalho como 100px */
+    position: relative; /* Torna o posicionamento do elemento relativo, permitindo o uso de "position: absolute" dentro dele */
 }
 
 .nav-brand {
-    position: absolute;
-    left: 0;
-    transform: translateX(50%);
+    display: flex; /* Usa o flexbox para posicionar o logo */
+    justify-content: center; /* Centraliza o logo horizontalmente */
+    align-items: center; /* Alinha o logo verticalmente */
+    position: relative; /* Define o posicionamento do logo como relativo, para facilitar a manipulação */
+    left: 0; /* Posiciona o logo no canto esquerdo */
 }
 
 .nav-brand img {
-    height: 0%; /* Tamanho da logo */
-    padding-top: 20px;
+    height: 200px; /* Define a altura da imagem do logo para 50px */
+    padding-top: 10px; /* Adiciona padding de 10px na parte superior da imagem */
 }
 
 /* Navbar principal */
 .classy-navbar {
-    display: flex; /* Organiza os itens em linha */
-    justify-content: space-between; /* Espaço entre os itens */
-    align-items: center; /* Alinha verticalmente os itens */
-    width: 100%;
+    display: flex; /* Usa o flexbox para distribuir os itens de navegação */
+    justify-content: space-between; /* Distribui os itens uniformemente entre as extremidades */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    width: 100%; /* Faz com que a navbar ocupe toda a largura disponível */
 }
 
-/* Menu de navegação */
 .classynav {
     display: flex; /* Exibe os itens de navegação na horizontal */
-    width: 100%; /* Ocupa toda a largura */
-    justify-content: space-between; /* Distribui os itens nas extremidades */
+    justify-content: space-between; /* Distribui os itens igualmente entre as extremidades */
+    width: 100%; /* A largura total da navbar */
 }
 
 .classynav ul.menu-items {
-    display: flex; /* Exibe os itens na horizontal */
-    list-style: none; /* Remove marcadores */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margens */
-    width: 100%; /* Largura total */
+    display: flex; /* Exibe os itens de navegação na horizontal */
+    list-style: none; /* Remove os marcadores (bolinhas) da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+    width: 100%; /* Faz a lista ocupar toda a largura disponível */
 }
 
 .classynav ul.menu-items li {
-    margin: 0 15px; /* Espaço entre os itens */
+    margin: 0 15px; /* Adiciona 15px de margem à esquerda e direita de cada item de menu */
 }
 
-/* Links de navegação */
 .classynav ul li a {
-    font-size: 18px;
-    font-weight: bold;
-    color: #414141;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: 0.3s ease;
+    font-size: 18px; /* Define o tamanho da fonte dos links de navegação */
+    font-weight: bold; /* Torna o texto dos links em negrito */
+    color: #414141; /* Define a cor do texto dos links como um cinza escuro */
+    padding: 10px 20px; /* Adiciona 10px de padding na parte superior e inferior, e 20px nas laterais */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos links */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Aplica uma transição suave de cor de fundo e de transformação ao passar o mouse */
 }
 
 .classynav ul li a:hover {
-    background-color: #fffddd;
-    color: white;
+    background-color: #fffddd; /* Altera a cor de fundo do link ao passar o mouse */
+    color: white; /* Altera a cor do texto para branco ao passar o mouse */
+    transform: scale(1.05); /* Aplica um efeito de aumento suave no link ao passar o mouse */
 }
+
 /* FOOTER */
 .footer-area {
-    background-color: #fff;
-    padding: 40px 0;
-    color: #414141;
-    text-align: center;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    background-color: #fff; /* Define a cor de fundo do rodapé como branca */
+    padding: 40px 20px; /* Adiciona 40px de padding na parte superior e inferior, 20px nas laterais */
+    color: #414141; /* Define a cor do texto no rodapé como cinza escuro */
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05); /* Aplica uma sombra suave acima do rodapé */
+    margin-top: auto; /* Empurra o rodapé para a parte inferior */
 }
 
-/* Container do footer */
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* Layout das colunas */
+.footer-links {
+    display: flex; /* Exibe as colunas no rodapé em linha */
+    justify-content: space-between; /* Distribui as colunas com espaço entre elas */
+    gap: 30px; /* Adiciona 30px de espaçamento entre as colunas */
+    flex-wrap: wrap; /* Permite que as colunas se ajustem quando a tela for pequena */
 }
 
-/* Coluna do footer */
+/* Cada coluna do footer */
 .footer-column {
-    flex: 1;
-    padding: 10px;
+    flex: 1; /* Faz cada coluna ocupar uma fração do espaço disponível */
+    min-width: 250px; /* Define a largura mínima das colunas para 250px */
+    padding: 10px; /* Adiciona 10px de padding dentro de cada coluna */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
 }
 
-/* Logo do footer */
-.footer-logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+/* Estilo dos títulos das colunas */
+.footer-column h5 {
+    font-size: 22px; /* Define o tamanho da fonte do título */
+    font-weight: bold; /* Define a fonte como negrito */
+    color: #333; /* Define a cor do texto como cinza escuro */
+    margin-bottom: 15px; /* Adiciona 15px de margem abaixo do título */
+    text-transform: uppercase; /* Transforma o texto em maiúsculo */
+    letter-spacing: 3px; /* Adiciona 3px de espaçamento entre as letras */
 }
 
-.footer-logo img {
-    width: auto;
-    height: 250px; /* Ajusta o tamanho da logo do footer */
-    margin-top: -50px;
-}
-
-/* Links do footer */
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
+/* Estilo para os textos das colunas */
+.footer-column p,
 .footer-column ul li {
-    margin-bottom: 10px;
+    font-size: 16px; /* Define o tamanho da fonte para os textos */
+    color: #666; /* Define a cor do texto como um cinza mais claro */
+    line-height: 1.5; /* Define a altura da linha para facilitar a leitura */
 }
 
-.footer-column ul li a {
-    color: #414141;
-    transition: color 0.3s ease;
+/* Links dentro das colunas */
+.footer-column a {
+    color: #414141; /* Define a cor dos links como cinza escuro */
+    font-size: 16px; /* Define o tamanho da fonte dos links */
+    transition: color 0.3s ease; /* Adiciona uma transição suave na cor do link */
 }
 
-.footer-column ul li a:hover {
-    color: #000;
+.footer-column a:hover {
+    color: #f90; /* Altera a cor dos links para laranja ao passar o mouse */
 }
 
-/* Coluna de redes sociais */
+/* Ajuste no estilo das redes sociais */
 .footer-social-info {
-    display: flex;
-    justify-content: flex-end; /* Alinha as redes sociais à direita */
-    text-align: center;
+    display: flex; /* Exibe os ícones de redes sociais em linha */
+    gap: 20px; /* Adiciona 20px de espaço entre os ícones */
+    align-items: center; /* Alinha os ícones verticalmente */
 }
 
 .footer-social-info a {
-    margin: 0 10px;
-    font-size: 20px;
-    color: #414141;
-    transition: color 0.3s;
+    font-size: 24px; /* Define o tamanho dos ícones das redes sociais */
+    color: #414141; /* Define a cor dos ícones como cinza escuro */
+    transition: color 0.3s ease; /* Adiciona uma transição suave na cor do ícone */
 }
 
 .footer-social-info a:hover {
-    color: #000;
+    color: #f90; /* Altera a cor dos ícones para laranja ao passar o mouse */
 }
 
 /* BANNER */
 .banner-area {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 100%; /* Faz o banner ocupar 100% da largura */
+    margin-bottom: 20px; /* Adiciona 20px de margem abaixo do banner */
 }
 
 .receipe-slider img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Faz a imagem do slider ocupar 100% da largura */
+    height: auto; /* Mantém a altura proporcional da imagem */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Aplica uma sombra na imagem */
 }
 
 /* Barra de Busca */
 .search-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    display: flex; /* Exibe a barra de busca em linha */
+    justify-content: center; /* Centraliza a barra de busca horizontalmente */
+    margin-top: 20px; /* Adiciona 20px de margem no topo */
+    margin-bottom: 20px; /* Adiciona 20px de margem na parte inferior */
 }
 
 .search-wrapper {
-    display: flex;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    width: 50%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Exibe os itens dentro da barra de busca em linha */
+    background-color: #fff; /* Define o fundo da barra de busca como branco */
+    padding: 10px; /* Adiciona 10px de padding dentro da barra de busca */
+    border-radius: 5px; /* Arredonda as bordas da barra de busca */
+    width: 50%; /* Define a largura da barra de busca como 50% */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra ao redor da barra */
 }
 
 .search-wrapper input[type="search"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 16px;
+    flex: 1; /* Faz o campo de pesquisa ocupar o espaço restante */
+    padding: 10px; /* Adiciona padding dentro do campo de pesquisa */
+    border: 1px solid #ccc; /* Define a borda como uma linha cinza */
+    border-radius: 5px; /* Arredonda as bordas do campo de pesquisa */
+    margin-right: 10px; /* Adiciona 10px de margem à direita */
+    font-size: 16px; /* Define o tamanho da fonte no campo de pesquisa */
 }
 
 .search-wrapper button {
-    background-color: #f90;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #f90; /* Define a cor de fundo do botão como laranja */
+    border: none; /* Remove a borda do botão */
+    color: white; /* Define a cor do texto no botão como branco */
+    padding: 10px 15px; /* Adiciona padding dentro do botão */
+    border-radius: 5px; /* Arredonda as bordas do botão */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+    transition: background-color 0.3s; /* Adiciona uma transição suave na cor de fundo */
 }
 
 .search-wrapper button:hover {
-    background-color: #f88;
+    background-color: #f88; /* Altera a cor de fundo do botão ao passar o mouse */
 }
 
 /* Cards de Receita */
 .best-receipe-area {
-    padding: 10px 0;
+    padding: 10px 0; /* Adiciona 10px de padding na parte superior e inferior */
 }
 
 .recipe-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: flex; /* Exibe os cards de receita em linha */
+    flex-wrap: wrap; /* Permite que os cards se ajustem para a próxima linha */
+    gap: 20px; /* Adiciona 20px de espaço entre os cards */
+    justify-content: center; /* Centraliza os cards horizontalmente */
 }
 
 .recipe-card {
-    width: 23%;
-    margin-bottom: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 23%; /* Define a largura de cada card de receita para 23% */
+    margin-bottom: 20px; /* Adiciona 20px de margem inferior */
+    background-color: #fff; /* Define o fundo do card como branco */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra no card */
+    border-radius: 10px; /* Arredonda as bordas do card */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave ao passar o mouse */
 }
 
 .single-best-receipe-area img {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #ddd;
+    width: 100%; /* Faz a imagem ocupar toda a largura do card */
+    height: auto; /* Mantém a altura proporcional da imagem */
+    border-bottom: none; /* Remove a borda inferior */
+    display: block; /* Garante que a imagem seja exibida como um bloco */
 }
 
 .receipe-content {
-    padding: 15px;
-    text-align: center;
+    padding: 10px; /* Adiciona padding dentro do conteúdo do card */
+    text-align: center; /* Centraliza o texto */
 }
 
 .receipe-content h5 {
-    font-size: 17px;
-    color: #000;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 17px; /* Define o tamanho da fonte do título da receita */
+    color: #000; /* Define a cor do título como preto */
+    font-weight: bold; /* Define a fonte como negrito */
+    transition: color 0.3s ease; /* Adiciona transição na cor */
+    margin-top: -50px; /* Adiciona margem negativa para ajustar a posição */
 }
 
 /* Melhorando a interação visual das receitas */
 .recipe-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px); /* Move o card para cima quando o mouse passar sobre ele */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Aumenta a sombra ao passar o mouse */
 }
 
 .receipe-content p {
-    font-size: 14px;
-    color: #555;
-    margin-top: 10px;
+    font-size: 14px; /* Define o tamanho da fonte do texto da receita */
+    color: #555; /* Define a cor do texto como cinza claro */
+    margin-top: 10px; /* Adiciona 10px de margem no topo */
+}
+
+/* Layout Receitas */
+.receipe-details {
+    display: flex; /* Organiza a foto e as informações em linha */
+    gap: 30px; /* Espaço entre a imagem e o card de informações */
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste em telas pequenas */
+}
+
+/* Coluna da imagem */
+.image-column {
+    flex: 1; /* A imagem ocupa metade da largura disponível */
+    min-width: 300px; /* Tamanho mínimo para a coluna da imagem */
+}
+
+.image-column img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura da coluna */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Adiciona bordas arredondadas na imagem */
+}
+
+/* Coluna das informações (dentro de um card) */
+.info-column {
+    flex: 1.5; /* A coluna de informações ocupa a outra metade da largura disponível */
+    background-color: #fff; /* Cor de fundo branca para o card */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do card */
+    border-radius: 10px; /* Bordas arredondadas no card */
+    padding: 20px; /* Adiciona espaço interno ao card */
+    box-sizing: border-box; /* Inclui o padding no cálculo do tamanho */
+    margin: 10px;
 }
 
 /* RESPONSIVIDADE - Telas pequenas */
 @media (max-width: 768px) {
     .classynav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        flex-direction: column; /* Organiza os itens do menu em coluna */
+        align-items: center; /* Centraliza os itens */
+        gap: 10px; /* Adiciona 10px de espaçamento entre os itens */
+    }
+
+    .classynav ul.menu-items {
+        flex-direction: column; /* Alinha os itens em coluna em vez de linha */
+        width: 100%; /* Faz a lista ocupar toda a largura disponível */
+        text-align: center; /* Centraliza o texto dos itens de menu */
+    }
+
+    .classynav ul.menu-items li {
+        margin: 10px 0; /* Adiciona um espaçamento vertical entre os itens de menu */
+    }
+
+    .nav-brand img {
+        height: 40px; /* Diminui a altura da logo em telas menores */
     }
 
     .recipe-card {
-        width: 48%;
+        width: 48%; /* Reduz a largura dos cards para 48% */
     }
 
     .search-wrapper {
-        width: 80%;
-    }
-    
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
+        width: 80%; /* Define a largura da barra de busca para 80% */
     }
 
-    .footer-logo img {
-        height: 150px; /* Ajusta o tamanho da logo para telas pequenas */
+    .footer-links {
+        flex-direction: column; /* Organiza as colunas em uma pilha */
+        align-items: center; /* Centraliza as colunas */
+        gap: 30px; /* Adiciona 30px de espaçamento entre as colunas */
     }
 
     .footer-column {
-        text-align: center; /* Centraliza os itens em telas pequenas */
-        margin-bottom: 20px;
+        text-align: center; /* Centraliza o texto nas colunas */
+    }
+
+    .footer-social-info {
+        justify-content: center; /* Centraliza os ícones de redes sociais */
+        margin-top: 20px; /* Adiciona 20px de margem superior */
+    }
+
+    .receipe-details {
+        flex-direction: column; /* Empilha a imagem e as informações em telas menores */
+        align-items: center; /* Alinha os itens ao centro */
+    }
+
+    .image-column,
+    .info-column {
+        flex: none; /* Impede que as colunas ocupem espaço proporcional */
+        width: 100%; /* Faz com que cada coluna ocupe toda a largura */
+    }
+
+    .info-column {
+        box-shadow: none; /* Remove a sombra do card em telas pequenas */
     }
 }
 
 /* Telas muito pequenas */
 @media (max-width: 480px) {
     .recipe-card {
-        width: 100%;
+        width: 100%; /* Faz os cards ocuparem toda a largura disponível */
     }
 
     .top-header-area {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
+        text-align: center; /* Centraliza o texto */
     }
 
     .nav-brand {
-        position: static;
-        transform: none;
+        position: static; /* Remove a posição absoluta do logo */
+        transform: none; /* Remove a transformação aplicada ao logo */
     }
 }
