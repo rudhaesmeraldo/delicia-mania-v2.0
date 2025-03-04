@@ -10,8 +10,8 @@
 
     <!-- Search Wrapper -->
     <div class="search-container">
-        <form action="#" method="post" class="search-wrapper">
-            <input type="search" name="search" placeholder="O que está procurando...">
+        <form action="{% url 'buscar' %}" method="GET" class="search-wrapper">
+            <input type="search" name="q" placeholder="O que está procurando..." required>
             <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>Buscar</button>
         </form>
     </div>
@@ -20,18 +20,23 @@
     <section class="best-receipe-area">
         <div class="recipe-cards-container">
             {% if receitas %}
-                {% for receita in receitas %}
-                <div class="recipe-card">
-                    <div class="single-best-receipe-area">
-                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="Imagem da receita">
-                        <div class="receipe-content">
-                            <a href="{% url 'receita' receita.id %}">
-                                <h5>{{ receita.nome_receita }}</h5>
-                            </a>
-                        </div>
+            {% for receita in receitas %}
+            <div class="recipe-card">
+                <div class="single-best-receipe-area">
+                    {% if receita.imagem %}
+                        <img src="/{{ receita.imagem }}" alt="Imagem da receita">
+                    {% else %}
+                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="Imagem padrão">
+                    {% endif %}
+                    <div class="receipe-content">
+                        <a href="{% url 'receita' receita.id %}">
+                            <h5>{{ receita.nome_receita }}</h5>
+                        </a>
                     </div>
                 </div>
-                {% endfor %}
+            </div>
+        {% endfor %}
+        
             {% else %}
                 <p>Nenhuma receita encontrada.</p>
             {% endif %}

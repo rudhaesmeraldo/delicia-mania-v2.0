@@ -239,6 +239,7 @@ body {
 }
 
 .recipe-card {
+    position: relative; /* Permite usar o position absoluto para o nome */
     width: 23%; /* Define a largura de cada card de receita para 23% */
     margin-bottom: 20px; /* Adiciona 20px de margem inferior */
     background-color: #fff; /* Define o fundo do card como branco */
@@ -249,28 +250,38 @@ body {
 }
 
 .single-best-receipe-area img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do card */
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 95%; /* Faz a imagem ocupar toda a largura do card */
     height: auto; /* Mantém a altura proporcional da imagem */
-    border-bottom: none; /* Remove a borda inferior */
     display: block; /* Garante que a imagem seja exibida como um bloco */
+    object-fit: cover; /* Faz com que a imagem cubra todo o espaço disponível sem distorcer */
+    border-radius: 10px;
 }
 
+/* Fixando o nome na parte inferior do card */
 .receipe-content {
+    position: absolute; /* Permite fixar o conteúdo na parte inferior */
+    bottom: 10px; /* Coloca o nome 10px acima da borda inferior */
+    left: 0;
+    right: 0;
     padding: 10px; /* Adiciona padding dentro do conteúdo do card */
     text-align: center; /* Centraliza o texto */
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente para o nome */
+    border-radius: 20px; /* Borda arredondada na parte superior */
+    margin-inline: 50px;
 }
 
 .receipe-content h5 {
-    font-size: 17px; /* Define o tamanho da fonte do título da receita */
-    color: #000; /* Define a cor do título como preto */
+    font-size: 20px; /* Define o tamanho da fonte do título da receita */
+    color: #ffffff; /* Define a cor do título como preto */
     font-weight: bold; /* Define a fonte como negrito */
     transition: color 0.3s ease; /* Adiciona transição na cor */
-    margin-top: -50px; /* Adiciona margem negativa para ajustar a posição */
 }
 
 /* Melhorando a interação visual das receitas */
 .recipe-card:hover {
-    transform: translateY(-5px); /* Move o card para cima quando o mouse passar sobre ele */
+    transform: translateY(-25px); /* Move o card para cima quando o mouse passar sobre ele */
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Aumenta a sombra ao passar o mouse */
 }
 
@@ -294,6 +305,7 @@ body {
 }
 
 .image-column img {
+    margin-top: 30px;
     width: 100%; /* Faz com que a imagem ocupe toda a largura da coluna */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px; /* Adiciona bordas arredondadas na imagem */
@@ -309,6 +321,7 @@ body {
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho */
     margin: 10px;
 }
+
 
 /* RESPONSIVIDADE - Telas pequenas */
 @media (max-width: 768px) {

@@ -8,7 +8,11 @@
                 <div class="receipe-details">
                     <!-- Coluna da imagem -->
                     <div class="image-column">
-                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="Imagem da receita">
+                        {% if receita.imagem %}
+                            <img src="/{{ receita.imagem }}" alt="Imagem da receita">
+                        {% else %}
+                            <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="Imagem padrão">
+                        {% endif %}
                     </div>
                     
                     <!-- Coluna das informações -->
@@ -25,6 +29,7 @@
                         </div>
 
                         <div class="single-preparation-step">
+                            <h4>Preparo</h4> 
                             <p>{{ receita.modo_preparo }}</p>
                         </div>
 

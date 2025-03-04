@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<h2>Resultados para "{{ query }}"</h2>
+
+<section class="best-receipe-area">
+    <div class="recipe-cards-container">
+        {% if receitas %}
+            {% for receita in receitas %}
+            <div class="recipe-card">
+                <div class="single-best-receipe-area">
+                    {% if receita.imagem %}
+                        <img src="/{{ receita.imagem }}" alt="Imagem da receita">
+                    {% else %}
+                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="Imagem padrão">
+                    {% endif %}
+                    <div class="receipe-content">
+                        <a href="{% url 'receita' receita.id %}">
+                            <h5>{{ receita.nome_receita }}</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>Nenhuma receita encontrada.</p>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}
