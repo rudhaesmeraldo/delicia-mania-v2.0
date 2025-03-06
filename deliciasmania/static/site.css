@@ -257,9 +257,6 @@ body {
     border-top-right-radius: 10px !important;
 }
 
-
-
-
 .single-best-receipe-area img {
     width: 95%; /* Faz a imagem ocupar toda a largura do card */
     height: auto; /* Mantém a altura proporcional da imagem */
@@ -329,6 +326,124 @@ body {
     padding: 20px; /* Adiciona espaço interno ao card */
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho */
 }
+
+#login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#login-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#login-container label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #414141;
+}
+
+#login-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+#login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f90;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#login-container button:hover {
+    background-color: #f88;
+}
+
+#login-container .error {
+    font-size: 14px;
+    color: red;
+}
+
+
+#perfil-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#perfil-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#perfil-container p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+#perfil-container a {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #f90;
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+#perfil-container a:hover {
+    background-color: #f88;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* RESPONSIVIDADE - Telas pequenas */
