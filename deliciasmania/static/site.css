@@ -249,9 +249,18 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave ao passar o mouse */
 }
 
+.recipe-card img {
+    width: 100% !important; /* Garante que a imagem ocupe toda a largura do card */
+    height: 400px !important; /* Define uma altura fixa para as imagens */
+    object-fit: cover !important; /* Corta a imagem para que ela se ajuste sem distorcer */
+    border-top-left-radius: 10px !important; /* Mantém as bordas arredondadas no topo */
+    border-top-right-radius: 10px !important;
+}
+
+
+
+
 .single-best-receipe-area img {
-    margin-top: 30px;
-    margin-left: 10px;
     width: 95%; /* Faz a imagem ocupar toda a largura do card */
     height: auto; /* Mantém a altura proporcional da imagem */
     display: block; /* Garante que a imagem seja exibida como um bloco */
@@ -319,7 +328,6 @@ body {
     border-radius: 10px; /* Bordas arredondadas no card */
     padding: 20px; /* Adiciona espaço interno ao card */
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho */
-    margin: 10px;
 }
 
 
