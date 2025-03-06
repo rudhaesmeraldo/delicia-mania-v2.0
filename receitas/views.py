@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_list_or_404, get_object_or_404
+from django.shortcuts import render, get_list_or_404, get_object_or_404, redirect
 from .models import Receita
 from .forms import ReceitaForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     receitas = Receita.objects.all()
@@ -31,7 +33,7 @@ def buscar(request):
     return render(request, 'buscar.html', {'receitas': receitas, 'query': query})
 
 def adicionar_receita(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         form = ReceitaForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
@@ -40,3 +42,23 @@ def adicionar_receita(request):
         form = ReceitaForm()
 
     return render(request, 'adicionar_receita.html', {'form': form})
+
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('perfil')
+        else:
+            return render(request, 'login.html',{'error':'Usuário ou Senha inválidos!'})
+    return render(request, 'login.html')
+
+def logout(request):
+    logout(request)
+    return redirect('index')
+
+@login_required
+def perfil(request):
+    return render(request, "perfil.html", {"user": request.user})
