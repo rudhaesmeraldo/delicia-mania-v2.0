@@ -23,9 +23,8 @@
                         </div>
 
                         <div class="receipe-duration">
-                            <h6>Preparo: {{ receita.tempo_preparo }} minutos</h6>
+                            <h6>Tempo: {{ receita.tempo_preparo }} minutos</h6>
                             <h6>Rendimento: {{ receita.rendimento }} porções</h6>
-                            <h6>Categoria: {{ receita.categoria }}</h6>
                         </div>
 
                         <div class="single-preparation-step">
@@ -38,6 +37,31 @@
                             <p>{{ receita.ingredientes }}</p>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!-- seção de receitas recomendadas -->
+            <div class="recipe-card-page-receita">
+                <h3>Talvez você possa se interessar</h3>
+                <div class="recipe-card-row-receita">
+                    {% for outra_receita in outras_receitas %}
+                        <div class="recipe-card-column-receita">
+                            <div class="recipe-card-receita">
+                                <a href="{% url 'receita' outra_receita.id %}">
+                                    {% if outra_receita.imagem %}
+                                        <img src="/{{ outra_receita.imagem }}" alt="Imagem da receita" class="recipe-card-image-receita">
+                                    {% else %}
+                                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="Imagem padrão" class="recipe-card-image-receita">
+                                    {% endif %}
+                                    <div class="recipe-card-info-receita">
+                                        <h4>{{ outra_receita.nome_receita }}</h4>
+                                        <p>{{ outra_receita.tempo_preparo }} minutos - {{ outra_receita.rendimento }}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    {% empty %}
+                        <p>Não há outras receitas para mostrar no momento.</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>

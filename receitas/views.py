@@ -10,7 +10,8 @@ def index(request):
 
 def receita(request, receita_id):
     receita = get_object_or_404(Receita, pk=receita_id)
-    return render(request, 'receita.html', {'receita': receita})
+    outras_receitas = Receita.objects.exclude(id=receita_id)[:3]
+    return render(request, 'receita.html', {'receita': receita, 'outras_receitas': outras_receitas})
 
 def buscar(request):
     query = request.GET.get('q', '')
