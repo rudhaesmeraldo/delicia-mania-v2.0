@@ -74,6 +74,7 @@ body {
     display: flex; /* Exibe os itens de navegação na horizontal */
     justify-content: space-between; /* Distribui os itens igualmente entre as extremidades */
     width: 100%; /* A largura total da navbar */
+    font-style: oblique;
 }
 
 .classynav ul.menu-items {
@@ -98,7 +99,7 @@ body {
 }
 
 .classynav ul li a:hover {
-    background-color: #fffddd; /* Altera a cor de fundo do link ao passar o mouse */
+    background-color: #f88; /* Altera a cor de fundo do link ao passar o mouse */
     color: white; /* Altera a cor do texto para branco ao passar o mouse */
     transform: scale(1.05); /* Aplica um efeito de aumento suave no link ao passar o mouse */
 }
@@ -154,7 +155,7 @@ body {
 }
 
 .footer-column a:hover {
-    color: #f90; /* Altera a cor dos links para laranja ao passar o mouse */
+    color: #f88; /* Altera a cor dos links para laranja ao passar o mouse */
 }
 
 /* Ajuste no estilo das redes sociais */
@@ -171,7 +172,7 @@ body {
 }
 
 .footer-social-info a:hover {
-    color: #f90; /* Altera a cor dos ícones para laranja ao passar o mouse */
+    color: #f88; /* Altera a cor dos ícones para laranja ao passar o mouse */
 }
 
 /* BANNER */
@@ -213,7 +214,7 @@ body {
 }
 
 .search-wrapper button {
-    background-color: #f90; /* Define a cor de fundo do botão como laranja */
+    background-color: #f88; /* Define a cor de fundo do botão como laranja */
     border: none; /* Remove a borda do botão */
     color: white; /* Define a cor do texto no botão como branco */
     padding: 10px 15px; /* Adiciona padding dentro do botão */
@@ -273,7 +274,7 @@ body {
     right: 0;
     padding: 10px; /* Adiciona padding dentro do conteúdo do card */
     text-align: center; /* Centraliza o texto */
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente para o nome */
+    background-color: rgba(255, 138, 138, 0.5); /* Fundo semi-transparente para o nome */
     border-radius: 20px; /* Borda arredondada na parte superior */
     margin-inline: 50px;
 }
@@ -283,6 +284,12 @@ body {
     color: #ffffff; /* Define a cor do título como preto */
     font-weight: bold; /* Define a fonte como negrito */
     transition: color 0.3s ease; /* Adiciona transição na cor */
+}
+
+.result-search{
+    font-size: 25px;
+    font-style: italic;
+    margin-left: 10px;
 }
 
 /* Melhorando a interação visual das receitas */
@@ -327,124 +334,216 @@ body {
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.perfil-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Cor de fundo do perfil */
+    border-radius: 10px; /* Cantos arredondados no container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor */
+    margin-top: 20px;
+}
+
+.perfil-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.perfil-info {
+    flex: 0 0 150px; /* Foto com largura fixa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 #login-container {
     max-width: 400px;
     margin: 100px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
     text-align: center;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
 }
 
 #login-container h2 {
-    font-size: 24px;
+    font-size: 28px;
     color: #333;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 #login-container label {
     display: block;
-    font-weight: bold;
-    margin: 10px 0 5px;
-    color: #414141;
+    font-weight: 600;
+    margin: 15px 0 5px;
+    color: #555;
+    font-size: 16px;
 }
 
 #login-container input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+#login-container input:focus {
+    outline: none;
+    border-color: #f88;
+    box-shadow: 0 0 10px rgba(248, 136, 136, 0.5);
 }
 
 #login-container button {
     width: 100%;
-    padding: 10px;
-    background-color: #f90;
+    padding: 12px;
+    background-color: #f88;
     border: none;
     color: white;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #login-container button:hover {
-    background-color: #f88;
+    background-color: #ff6f6f;
+    transform: scale(1.05);
 }
 
 #login-container .error {
     font-size: 14px;
-    color: red;
+    color: #f44336;
+    margin-top: 10px;
+    font-weight: 500;
 }
 
-
-#perfil-container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-}
-
-#perfil-container h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-#perfil-container p {
-    font-size: 16px;
-    color: #666;
-    margin: 5px 0;
-}
-
-#perfil-container a {
+#login-container a {
     display: inline-block;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: #f90;
+    margin-top: 20px;
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#login-container a:hover {
+    color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.perfil-foto {
+    width: 250px;
+    height: auto;
+    max-width: 250px; /* Tamanho máximo da foto */
+    background-color: #f4f4f4; /* Cor de fundo do perfil */
+    border-radius: 100%; /* Cantos arredondados no container */
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 1); /* Sombra suave ao redor */
+    margin-left: 30px;
+}
+
+.perfil-dados {
+    flex: 1;
+    padding-left: 20px;
+    margin-left: 30px;
+}
+
+.perfil-titulo {
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+    color: #f88;
+}
+
+.perfil-email, .perfil-nome {
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    background-color: #f4f4f4; /* Cor de fundo do perfil */
+    border-radius: 5px; /* Cantos arredondados no container */
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 1); /* Sombra suave ao redor */
+    color: rgb(126, 126, 126);
+    font-style: oblique;
+    padding-left: 10px;
+}
+
+.perfil-logout {
+    display: block;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #f88;
     color: white;
     text-decoration: none;
-    margin-top: 15px;
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin-inline: 55%;
 }
 
-#perfil-container a:hover {
+.perfil-logout:hover {
     background-color: #f88;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* RESPONSIVIDADE - Telas pequenas */
 @media (max-width: 768px) {

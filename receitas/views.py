@@ -1,26 +1,16 @@
 from django.shortcuts import render, get_list_or_404, get_object_or_404, redirect
 from .models import Receita
 from .forms import ReceitaForm
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
 
 def index(request):
     receitas = Receita.objects.all()
-
-    dados = {
-        'receitas': receitas
-    }
-
-    return render(request,'index.html', dados)
+    return render(request, 'index.html', {'receitas': receitas})
 
 def receita(request, receita_id):
     receita = get_object_or_404(Receita, pk=receita_id)
-
-    receita_a_exibir = {
-        'receita': receita
-    }
-
-    return render(request,'receita.html', receita_a_exibir)
+    return render(request, 'receita.html', {'receita': receita})
 
 def buscar(request):
     query = request.GET.get('q', '')
@@ -43,22 +33,24 @@ def adicionar_receita(request):
 
     return render(request, 'adicionar_receita.html', {'form': form})
 
-def login(request):
+def login_view(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            login(request, user)
-            return redirect('perfil')
+            auth_login(request, user)
+            next_url = request.POST.get('next', 'perfil')
+            return redirect(next_url)
         else:
-            return render(request, 'login.html',{'error':'Usuário ou Senha inválidos!'})
+            return render(request, 'login.html', {'error': 'Usuário ou Senha inválidos!'})
     return render(request, 'login.html')
 
-def logout(request):
-    logout(request)
+
+def logout_view(request):
+    auth_logout(request)
     return redirect('index')
 
 @login_required
 def perfil(request):
-    return render(request, "perfil.html", {"user": request.user})
+    return render(request, 'perfil.html')

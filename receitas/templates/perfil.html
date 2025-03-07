@@ -1,10 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div id="perfil-container">
-    <h2>Perfil de {{ user.username }}</h2>
-    <p>Email: {{ user.email }}</p>
-    <p>Nome: {{ user.first_name }} {{ user.last_name }}</p>
-    <a href="{% url 'logout' %}">Sair</a>
+<div class="container perfil-container">
+    <h2 class="perfil-titulo">Perfil de {{ user.username }}</h2>
+    
+    <!-- Foto do Usuário e Dados -->
+    <div class="perfil-flex">
+        <!-- Foto do Usuário -->
+        <div class="perfil-info">
+            <img src="{{ user.perfil.foto.url }}" alt="Foto de {{ user.username }}" class="perfil-foto" id="foto-perfil">
+        </div>
+
+        <!-- Informações do Usuário -->
+        <div class="perfil-dados">
+            <p class="perfil-email">Email: {{ user.email }}</p>
+            <p class="perfil-nome">Nome: {{ user.first_name }} {{ user.last_name }}</p>
+        </div>
+    </div>
+
+    <a href="{% url 'logout' %}" class="perfil-logout">Sair</a>
 </div>
 {% endblock %}
