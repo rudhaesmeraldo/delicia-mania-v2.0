@@ -16,8 +16,7 @@ html, body {
 body {
     font-family: Arial, sans-serif; /* Define a fonte padrão como Arial */
     line-height: 1.6; /* Define a altura das linhas de texto para 1.6, melhorando a legibilidade */
-    background-color: #f4f4f4; /* Define a cor de fundo clara para o body */
-    color: #333; /* Define a cor padrão do texto como um tom de cinza escuro */
+    background-color: #e7e7e7; /* Define a cor de fundo clara para o body */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Garantir que o conteúdo se espalhe pela tela */
@@ -85,7 +84,7 @@ body {
 .classynav ul li a {
     font-size: 18px; /* Define o tamanho da fonte dos links de navegação */
     font-weight: bold; /* Torna o texto dos links em negrito */
-    color: #414141; /* Define a cor do texto dos links como um cinza escuro */
+    color: #111; /* Define a cor do texto dos links como um cinza escuro */
     padding: 10px 20px; /* Adiciona 10px de padding na parte superior e inferior, e 20px nas laterais */
     border-radius: 5px; /* Adiciona bordas arredondadas aos links */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Aplica uma transição suave de cor de fundo e de transformação ao passar o mouse */
@@ -101,7 +100,7 @@ body {
 .footer-area {
     background-color: #fff; /* Define a cor de fundo do rodapé como branca */
     padding: 40px 20px; /* Adiciona 40px de padding na parte superior e inferior, 20px nas laterais */
-    color: #414141; /* Define a cor do texto no rodapé como cinza escuro */
+    color: #111; /* Define a cor do texto no rodapé como cinza escuro */
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05); /* Aplica uma sombra suave acima do rodapé */
     margin-top: auto; /* Empurra o rodapé para a parte inferior */
 }
@@ -126,7 +125,7 @@ body {
 .footer-column h5 {
     font-size: 22px; /* Define o tamanho da fonte do título */
     font-weight: bold; /* Define a fonte como negrito */
-    color: #333; /* Define a cor do texto como cinza escuro */
+    color: #111; /* Define a cor do texto como cinza escuro */
     margin-bottom: 15px; /* Adiciona 15px de margem abaixo do título */
     text-transform: uppercase; /* Transforma o texto em maiúsculo */
     letter-spacing: 3px; /* Adiciona 3px de espaçamento entre as letras */
@@ -136,13 +135,13 @@ body {
 .footer-column p,
 .footer-column ul li {
     font-size: 16px; /* Define o tamanho da fonte para os textos */
-    color: #666; /* Define a cor do texto como um cinza mais claro */
+    color: #444; /* Define a cor do texto como um cinza mais claro */
     line-height: 1.5; /* Define a altura da linha para facilitar a leitura */
 }
 
 /* Links dentro das colunas */
 .footer-column a {
-    color: #414141; /* Define a cor dos links como cinza escuro */
+    color: #444; /* Define a cor dos links como cinza escuro */
     font-size: 16px; /* Define o tamanho da fonte dos links */
     transition: color 0.3s ease; /* Adiciona uma transição suave na cor do link */
 }
@@ -160,7 +159,7 @@ body {
 
 .footer-social-info a {
     font-size: 24px; /* Define o tamanho dos ícones das redes sociais */
-    color: #414141; /* Define a cor dos ícones como cinza escuro */
+    color: #444; /* Define a cor dos ícones como cinza escuro */
     transition: color 0.3s ease; /* Adiciona uma transição suave na cor do ícone */
 }
 
@@ -268,8 +267,8 @@ body {
     padding: 10px; /* Adiciona padding dentro do conteúdo do card */
     text-align: center; /* Centraliza o texto */
     background-color: rgba(255, 138, 138, 0.5); /* Fundo semi-transparente para o nome */
-    border-radius: 20px; /* Borda arredondada na parte superior */
-    margin-inline: 50px;
+    border-radius: 0px; /* Borda arredondada na parte superior */
+    margin-inline: 0px; /* tamanho de uma ponta a outra */
 }
 
 .receipe-content h5 {
@@ -294,7 +293,6 @@ body {
 
 .receipe-content p {
     font-size: 14px; /* Define o tamanho da fonte do texto da receita */
-    color: #555; /* Define a cor do texto como cinza claro */
     margin-top: 10px; /* Adiciona 10px de margem no topo */
 }
 
@@ -307,7 +305,7 @@ body {
 
 /* Coluna da imagem */
 .image-column {
-    flex: 1; /* A imagem ocupa a metade da largura disponível */
+    flex: 1; /* A imagem ocupa "x' valor da largura disponível */
     min-width: 300px; /* Tamanho mínimo para a coluna da imagem */
     display: flex; /* Usado para centralizar a imagem se necessário */
     justify-content: center; /* Centraliza a imagem horizontalmente */
@@ -340,45 +338,6 @@ body {
 .info-column > * {
     margin-bottom: 10px; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Estilos para a página de card de receita */
 .recipe-card-page-receita {
@@ -472,61 +431,9 @@ body {
 
 /* Efeito hover no card */
 .recipe-card-receita:hover {
-    transform: translateY(-10px); /* Move o card para cima quando o mouse passa sobre ele */
+    transform: translateY(-25px); /* Move o card para cima quando o mouse passa sobre ele */
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Aumenta a sombra ao passar o mouse */
 }
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .recipe-card-column-receita {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .perfil-container {
     max-width: 900px;
@@ -685,6 +592,7 @@ body {
     background-color: #e55;
     transform: translateY(2px);
 }
+
 /* RESPONSIVIDADE - Telas pequenas */
 @media (max-width: 768px) {
     .classy-navbar {
@@ -722,6 +630,10 @@ body {
 
     .recipe-card {
         width: 48%; /* Reduz a largura dos cards para 48% */
+    }
+    .recipe-card-column-receita {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 
     .search-wrapper {
