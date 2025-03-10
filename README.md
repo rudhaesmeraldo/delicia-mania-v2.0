@@ -16,7 +16,7 @@
 
 <h3 align="left">🧱Estrutura</h3>
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/472301ad-2545-4d08-b9eb-b2fe3e3d2297" width="110px">
+  <img src="https://github.com/user-attachments/assets/472301ad-2545-4d08-b9eb-b2fe3e3d2297" width="300px">
 </div> 
 
 ###
