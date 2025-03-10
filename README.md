@@ -15,24 +15,42 @@
 ###
 
 <h3 align="left">🧱Estrutura</h3>
-<div align="center">
+<div align="left">
   <img src="https://github.com/user-attachments/assets/472301ad-2545-4d08-b9eb-b2fe3e3d2297" width="300px">
 </div> 
 
 ###
 
 <h3 align="left">🏡Home</h3>
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/ab5ab408-9d6f-487f-b2a7-1ec506ae7ee1" width="300px">
+</div>
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/472301ad-2545-4d08-b9eb-b2fe3e3d2297" width="300px">
+</div> 
 
 ###
 
 <h3 align="left">🥐Receita</h3>
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/472301ad-2545-4d08-b9eb-b2fe3e3d2297" width="300px">
+</div> 
 
 ###
 
 <h3 align="left">🙋Perfil</h3>
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/472301ad-2545-4d08-b9eb-b2fe3e3d2297" width="300px">
+</div> 
 
 ###
 
 <h3 align="left">🔎Busca</h3>
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/472301ad-2545-4d08-b9eb-b2fe3e3d2297" width="300px">
+</div>
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/472301ad-2545-4d08-b9eb-b2fe3e3d2297" width="300px">
+</div> 
 
 ###
