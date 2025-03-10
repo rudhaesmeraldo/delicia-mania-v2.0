@@ -23,10 +23,10 @@
 
 <h3 align="left">🏡Home</h3>
 <div align="left">
-  <img src="https://github.com/user-attachments/assets/ab5ab408-9d6f-487f-b2a7-1ec506ae7ee1" width="300px">
+  <img src="https://github.com/user-attachments/assets/ab5ab408-9d6f-487f-b2a7-1ec506ae7ee1" width="1920px">
 </div>
 <div align="left">
-  <img src="https://github.com/user-attachments/assets/ac854dc2-6dd7-4c2a-b188-1beda210ad41" width="300px">
+  <img src="https://github.com/user-attachments/assets/ac854dc2-6dd7-4c2a-b188-1beda210ad41" width="1080px">
 </div> 
 
 ###
