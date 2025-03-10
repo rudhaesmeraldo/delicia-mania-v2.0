@@ -33,7 +33,7 @@
 
 <h3 align="left">🥐Receita</h3>
 <div align="left">
-  <img src="https://github.com/user-attachments/assets/" width="300px">
+  <img src="https://github.com/user-attachments/assets/97007ec6-8755-4c18-9dd2-fc89cb8d1049" width="1080px">
 </div> 
 
 ###
