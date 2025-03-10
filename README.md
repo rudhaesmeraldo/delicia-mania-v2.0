@@ -10,7 +10,7 @@
 
 ###
 
-<h6 align="left">Olá! Este projeto tem como objetivo aprimorar minhas habilidades na prática. Reaproveitei um projeto antigo da Alura, que possuía apenas a tela inicial, e o aperfeiçoei adicionando diversas funcionalidades, como pesquisa de receitas, cards animados com as receitas, além de telas de perfil e login, fora a estilização do site. :)</h6>
+<h6 align="left">Olá! Este projeto tem como objetivo aprimorar minhas habilidades na prática. Reaproveitei um projeto antigo da Alura, que possuía apenas a tela inicial, e o aperfeiçoei adicionando diversas funcionalidades, como pesquisa de receitas, cards animados das receitas, perfil, login, cadastro e estilizei completamente o site. :)</h6>
 
 ###
 
