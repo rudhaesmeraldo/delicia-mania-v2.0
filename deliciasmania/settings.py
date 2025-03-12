@@ -75,16 +75,28 @@ WSGI_APPLICATION = 'deliciasmania.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'delicia_mania',
+#        'USER': 'postgres',
+#        'PASSWORD': '1234',
+#        'HOST': 'localhost',
+#    }
+#}
+
+from psycopg2 import connect
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'delicia_mania',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'NAME': os.environ.get('delicia_mania'),
+        'USER': os.environ.get('postgres'),
+        'PASSWORD': os.environ.get('1234'),
+        'HOST': os.environ.get('localhost'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
