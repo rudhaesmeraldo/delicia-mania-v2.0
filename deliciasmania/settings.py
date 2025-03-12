@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-thfk8tp134@()4)%p3jb^b^n%mtm_rqutw6rxa0%6eyt&@@6im
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,28 +75,17 @@ WSGI_APPLICATION = 'deliciasmania.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'delicia_mania',
-#        'USER': 'postgres',
-#        'PASSWORD': '1234',
-#        'HOST': 'localhost',
-#    }
-#}
-
-from psycopg2 import connect
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('delicia_mania'),
-        'USER': os.environ.get('postgres'),
-        'PASSWORD': os.environ.get('1234'),
-        'HOST': os.environ.get('localhost'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
+        'NAME': 'delicia_mania',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
     }
 }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
